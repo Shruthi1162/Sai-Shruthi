@@ -76,7 +76,7 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 
-st.title("🌿 Plant Disease Detection")
+st.title("🌿 Plan Disease Detection")
 
 model = tf.keras.models.load_model("plant_disease_model.keras")
 
