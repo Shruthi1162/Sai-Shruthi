@@ -10,7 +10,6 @@ Original file is located at
 !git clone https://github.com/spMohanty/PlantVillage-Dataset.git
 
 !ls PlantVillage-Dataset/raw/color | head
-
 import tensorflow as tf
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.applications import MobileNetV2
