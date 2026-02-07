@@ -75,6 +75,27 @@ import streamlit as st
 import tensorflow as tf
 import numpy as np
 from PIL import Image
+# ---------------------------
+# Simple Login System
+# ---------------------------
+if "logged_in" not in st.session_state:
+    st.session_state.logged_in = False
+
+if not st.session_state.logged_in:
+    st.title("🔐 Login")
+
+    username = st.text_input("Username")
+    password = st.text_input("Password", type="password")
+
+    if st.button("Login"):
+        if username == "admin" and password == "1234":
+            st.session_state.logged_in = True
+            st.success("Login successful!")
+            st.rerun()
+        else:
+            st.error("Invalid username or password")
+
+    st.stop()
 
 st.title("🌿 Plan Disease Detection")
 
