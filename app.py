@@ -46,7 +46,6 @@ base_model = MobileNetV2(
 )
 
 base_model.trainable = False
-
 x = base_model.output
 x = GlobalAveragePooling2D()(x)
 output = Dense(train_data.num_classes, activation="softmax")(x)
